@@ -1,25 +1,12 @@
 <div class="ae-grid au-xs-ta-center au-mb-4">
-    <div class="animated fadeIn item-lg-4 ae-kappa au-mb-3">
-        <img src="assets/img/team-1.jpg" alt="" class="au-mb-3">
-        <h5 class="ae-u-bolder au-mt-2">Paul Richardson</h5>
-        <p class="ae-u-bolder au-mb-3">The Financial Times</p>
-        <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">An acclaimed food and travel writer, Paul Richardson left London for Spain in 1989. He writes for some of the UK’s most prestigious publications, including Condé Nast Traveller and the Financial Times, and is the author of A Late Dinner: Discovering
-            the Food of Spain (Bloomsbury). Paul and his husband Nacho produce their own olive oil, wine, ham, fruit, and vegetables, on their twelve-acre organic farm in Extremadura.</p>
+
+    <div *ngFor="let person of infoPageService.equipo" class="animated fadeIn item-lg-4 ae-kappa au-mb-3">
+        <img [src]="person.url" alt="" class="au-mb-3">
+        <h5 class="ae-u-bolder au-mt-2">{{ person.nombre }}</h5>
+        <p class="ae-u-bolder au-mb-3">{{ person.subtitulo }}</p>
+        <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">{{ person.frase }}</p>
     </div>
-    <div class="animated fadeIn ae-grid__item item-lg-4 ae-kappa au-mb-3">
-        <img src="assets/img/team-2.png" alt="" class="au-mb-3">
-        <h5 class="ae-u-bolder au-mt-2">Alexandra Marshall</h5>
-        <p class="ae-u-bolder au-mb-3">WSJ magazine</p>
-        <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">Alexandra Marshall has been covering travel, fashion, design, and food for 20 years and counting (the last 11 from Paris) for WSJ magazine, T: The New York Times Style Magazine, W, Harper’s Bazaar, and Town & Country, among others. Before all
-            is said and done, it is her goal to drive every back road in France; she is making excellent progress.</p>
-    </div>
-    <div class="animated fadeIn ae-grid__item item-lg-4 ae-kappa au-mb-3">
-        <img src="assets/img/team-3.jpg" alt="" class="au-mb-3">
-        <h5 class="ae-u-bolder au-mt-2">Gisela Williams</h5>
-        <p class="ae-u-bolder au-mb-3">Vogue</p>
-        <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">Gisela Williams is a European correspondent for Food & Wine, Travel + Leisure, and T: The New York Times Style Magazine and contributes to Surface and Vogue, among other publications. Born in Connecticut, Gisela lived in Bali, Bermuda, and Brooklyn
-            before moving to Madrid in 2001. Three years later she left Spain for Germany. She has now happily settled down in Berlin with her husband and three children.</p>
-    </div>
+
 </div>
 <div class="ae-grid au-pt-2">
     <div class="ae-grid__item item-lg-8 item-lg--offset-2">
