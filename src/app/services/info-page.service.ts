@@ -13,7 +13,7 @@ export class InfoPageService {
   equipo: any[] = []
 
   constructor( private http: HttpClient) {
-    console.log('InfoPage Service');
+    // console.log('InfoPage Service');
 
     this.loadInfo();
     this.loadEquipo();
@@ -32,7 +32,6 @@ export class InfoPageService {
     this.http.get('https://angular-html-6c575.firebaseio.com/equipo.json')
     .subscribe( (resp: any []) => {
       this.equipo = resp;
-      console.log(resp);
     });
   }
 }
