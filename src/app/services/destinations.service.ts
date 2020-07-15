@@ -63,14 +63,15 @@ export class DestinationsService {
   private filterDestinations( term: string) {
     console.log(this.destinations);
     this.travelSearch = [];
-
+    
     term = term.toLocaleLowerCase();
-
+    
     this.destinations.forEach(dest => {
-
+      
       const titleLower = dest.title.toLocaleLowerCase();
-
-      if (dest.cod.indexOf(term) >= 0 || titleLower.indexOf(term) >= 0) {
+      
+      if (
+        dest.cod.indexOf(term) >= 0 || titleLower.indexOf(term) >= 0) {
         this.travelSearch.push(dest);
       }
 
